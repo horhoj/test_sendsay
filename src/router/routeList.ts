@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { HomePage } from '../pages/HomePage';
 import { Page404 } from '../pages/Page404';
-import { TestPage } from '../pages/TestPage';
+import { ConstructorPage } from '../pages/ConstructorPage';
+import { RuntimePage } from '../pages/RuntimePage';
 
 interface RouteItem {
   name: Routes;
@@ -9,21 +9,19 @@ interface RouteItem {
   component: FC;
 }
 
-export type Routes = 'HomePage' | 'TestPage' | 'Page404';
+export type Routes = 'Page404' | 'ConstructorPage' | 'RuntimePage';
 
 export const routeList: RouteItem[] = [
   {
-    name: 'HomePage',
-    path: '/',
-    component: HomePage,
+    name: 'ConstructorPage',
+    path: '/constructor-page',
+    component: ConstructorPage,
   },
-
   {
-    name: 'TestPage',
-    path: '/test-page/:id',
-    component: TestPage,
+    name: 'RuntimePage',
+    path: '/runtime-page',
+    component: RuntimePage,
   },
-
   {
     name: 'Page404',
     path: '*',
