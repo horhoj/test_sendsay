@@ -12,19 +12,19 @@ export const Header: FC = () => {
           <li>
             <NavLink
               className={styles.navLink}
-              to={getRoutePath('ConstructorPage')}
+              to={getRoutePath('RuntimePage')}
             >
               {icons.eyeIcon}
-              Constructor
+              Runtime
             </NavLink>
           </li>
           <li>
             <NavLink
               className={styles.navLink}
-              to={getRoutePath('RuntimePage')}
+              to={getRoutePath('ConstructorPage')}
             >
               {icons.bracesIcon}
-              Runtime
+              Constructor
             </NavLink>
           </li>
         </ul>

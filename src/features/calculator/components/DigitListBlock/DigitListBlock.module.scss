@@ -1,0 +1,31 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+
+  width: 100%;
+  height: 216px;
+  gap: 4px;
+}
+
+.digitButton {
+  background: #FFFFFF;
+  border: 1px solid #E2E3E5;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  &:not([disabled]):global.active {
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #5D5FEF;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    color: black;
+    border: 1px solid #E2E3E5;
+  }
+
+}

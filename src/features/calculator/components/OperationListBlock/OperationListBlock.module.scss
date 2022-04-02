@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  height: 56px;
+}
+
+.operationButton {
+  background: #FFFFFF;
+  border: 1px solid #E2E3E5;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 100%;
+
+
+  &:not([disabled]):global.active {
+    &:hover {
+      border: 1px solid #5D5FEF;
+      cursor: pointer;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    color: black;
+    border: 1px solid #E2E3E5;
+  }
+
+
+}

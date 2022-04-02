@@ -1,0 +1,57 @@
+$WIDTH: 267px;
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+}
+
+.constructorBlockList {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+
+
+  & > div {
+    margin: 6px 0;
+  }
+}
+
+.constructorBlock {
+  padding: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+
+  background-color: white;
+
+}
+
+.calculatorModel {
+  width: 268px;
+  height: 492px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 12px;
+
+  border-style: dashed;
+  border-size: 1px;
+  border-color: #C4C4C4;
+
+  & > div {
+    padding: 6px 0;
+    position: relative;
+
+  }
+
+}
+
+.dragHeader {
+  cursor: grabbing;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}
+

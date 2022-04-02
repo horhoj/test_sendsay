@@ -1,0 +1,26 @@
+.calculatorModel {
+  width: 100%;
+  min-height: 468px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.calculatorModelTextHelper1 {
+  margin-top: 14px;
+  color: #5D5FEF;
+  font-weight: 500;
+}
+
+.calculatorModelTextHelper2 {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6B7280;
+  font-size: 12px;
+}

@@ -1,0 +1,21 @@
+.wrap {
+  width: 100%;
+  background-color: #5D5FEF;
+  border-radius: 6px;
+  height: 64px;
+
+  color: white;
+  border: 1px solid #5D5FEF;
+
+  &:not([disabled]):global.active {
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(#5D5FEF, 0.9);
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    border: 1px solid #5D5FEF;
+  }
+}
