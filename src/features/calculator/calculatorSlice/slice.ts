@@ -7,12 +7,7 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
-  calculatorData: [
-    'DisplayBlock',
-    'OperationListBlock',
-    'DigitListBlock',
-    'ResultOperationBlock',
-  ],
+  calculatorData: [],
 };
 
 export const { reducer, actions } = createSlice({
