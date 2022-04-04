@@ -2,7 +2,6 @@ import { FC, useState } from 'react';
 import {
   DragDropContext,
   Draggable,
-  DragStart,
   Droppable,
   DropResult,
 } from 'react-beautiful-dnd';
@@ -47,7 +46,6 @@ export const ConstructorForm: FC = () => {
         CALCULATOR_BLOCK_LIST[index];
 
       if (CALCULATOR_BLOCK_LIST.includes(calculatorBlockItem)) {
-        // console.log(e.destination.index, calculatorBlockItem);
         dispatch(
           calculatorSlice.actions.addBlock({
             index: e.destination.index,
@@ -61,7 +59,6 @@ export const ConstructorForm: FC = () => {
       e.destination?.droppableId === MODEL_BLOCK_LIST_DROPPABLE_ID &&
       e.source.droppableId === MODEL_BLOCK_LIST_DROPPABLE_ID
     ) {
-      // console.log(e.source.index, e.destination.index);
       dispatch(
         calculatorSlice.actions.moveBlock({
           beginIndex: e.source.index,
@@ -71,7 +68,7 @@ export const ConstructorForm: FC = () => {
     }
   };
 
-  const handleDragStart = (e: DragStart) => {
+  const handleDragStart = () => {
     setIsDrag(true);
   };
 

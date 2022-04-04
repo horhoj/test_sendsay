@@ -5,12 +5,13 @@ import styles from './OperationListBlock.module.scss';
 interface OperationListBlockProps {
   disabled: boolean;
   active: boolean;
+  onClick(data: string): void;
 }
 
 export const OperationListBlock: FC<OperationListBlockProps> = (props) => {
   const handleOperationBtnClk = (operation: OperationItem) => {
     if (props.active) {
-      console.log(operation);
+      props.onClick(operation);
     }
   };
 

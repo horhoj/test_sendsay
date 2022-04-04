@@ -1,4 +1,4 @@
-export const OPERATION_LIST = ['/', 'х', '-', '+'] as const;
+export const OPERATION_LIST = ['/', 'x', '-', '+'] as const;
 
 export type OperationItem = typeof OPERATION_LIST[number];
 
@@ -13,7 +13,7 @@ export const DIGIT_LIST = [
   '8',
   '9',
   '0',
-  ',',
+  '.',
 ] as const;
 
 export type DigitItem = typeof DIGIT_LIST[number];

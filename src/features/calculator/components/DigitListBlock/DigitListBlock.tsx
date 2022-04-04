@@ -5,12 +5,13 @@ import styles from './DigitListBlock.module.scss';
 interface DigitListBlockProps {
   disabled: boolean;
   active: boolean;
+  onClick(data: string): void;
 }
 
 export const DigitListBlock: FC<DigitListBlockProps> = (props) => {
   const handleDigitBtnClk = (digitItem: DigitItem) => {
     if (props.active) {
-      console.log(digitItem);
+      props.onClick(digitItem);
     }
   };
 

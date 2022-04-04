@@ -1,0 +1,14 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 250px;
+}
+
+.calculatorBlockWrap {
+  padding: 6px;
+}

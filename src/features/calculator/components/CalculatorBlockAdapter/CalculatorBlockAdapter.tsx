@@ -10,7 +10,9 @@ interface CalculatorBlockAdapterProps {
   active: boolean;
   disabled: boolean;
   displayText?: string;
+  onClick?(data: string): void;
 }
+
 export const CalculatorBlockAdapter: FC<CalculatorBlockAdapterProps> = (
   props,
 ) => {
@@ -24,15 +26,29 @@ export const CalculatorBlockAdapter: FC<CalculatorBlockAdapterProps> = (
   }
   if (props.blockType === 'OperationListBlock') {
     return (
-      <OperationListBlock disabled={props.disabled} active={props.active} />
+      <OperationListBlock
+        disabled={props.disabled}
+        active={props.active}
+        onClick={(data) => props.onClick && props.onClick(data)}
+      />
     );
   }
   if (props.blockType === 'DigitListBlock') {
-    return <DigitListBlock disabled={props.disabled} active={props.active} />;
+    return (
+      <DigitListBlock
+        disabled={props.disabled}
+        active={props.active}
+        onClick={(data) => props.onClick && props.onClick(data)}
+      />
+    );
   }
   if (props.blockType === 'ResultOperationBlock') {
     return (
-      <ResultOperationBlock disabled={props.disabled} active={props.active} />
+      <ResultOperationBlock
+        disabled={props.disabled}
+        active={props.active}
+        onClick={(data) => props.onClick && props.onClick(data)}
+      />
     );
   }
   return null;

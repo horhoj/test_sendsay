@@ -8,10 +8,10 @@ interface InitialState {
 
 const initialState: InitialState = {
   calculatorData: [
-    // 'DisplayBlock',
-    // 'DigitListBlock',
-    // 'ResultOperationBlock',
-    // 'OperationListBlock',
+    'DisplayBlock',
+    'OperationListBlock',
+    'DigitListBlock',
+    'ResultOperationBlock',
   ],
 };
 

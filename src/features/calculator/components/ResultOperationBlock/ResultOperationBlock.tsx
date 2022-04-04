@@ -4,12 +4,13 @@ import styles from './ResultOperationBlock.module.scss';
 interface ResultOperationBlockProps {
   disabled: boolean;
   active: boolean;
+  onClick(data: string): void;
 }
 
 export const ResultOperationBlock: FC<ResultOperationBlockProps> = (props) => {
   const handleResultOperationBtnClk = () => {
     if (props.active) {
-      console.log('result');
+      props.onClick('=');
     }
   };
 
